@@ -28,6 +28,7 @@
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-image-resize": "^0.12.0"
+    "gulp-image-resize": "^0.12.0",
+    "mailgun-js":"0.5"
   }
 }
