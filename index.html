@@ -1,7 +1,26 @@
 ---
 layout: default
 ---
-
+<script>
+    function sendMail() {
+        $.ajax('https://api.mailgun.net/v3/sandboxc390aca07b594c48a282348d48e1042e.mailgun.org/messages',
+        {
+            type:"POST",
+            username: 'api',
+            password: 'key-8f7d72da06e3d3ac656128e4998529c3',
+            data:{
+                "html": "<h1>TITLE-HERE</h1>",
+                "subject": "Hey you, awesome",
+                "from": "User<contact@shegiye.com>",
+                "to": "<antenehgeb@gmail.com>"
+            },
+            success:function(a,b,c){
+                console.log( 'mail sent: ', b );
+            }.bind(this),
+            error:function( xhr, status, errText ){console.log( 'mail sent failed: ', xhr.responseText );}
+        })
+}
+</script>
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -80,7 +99,7 @@ layout: default
                             <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
                         </div>
                         <ul class="actions">
-                            <li><input type="submit" value="Send" class="special"/></li>
+                            <li><input type="submit" onclick="sendMail();" value="Send" class="special"/></li>
                             <li><input type="reset" value="Reset"/></li>
                         </ul>
                     </form>
