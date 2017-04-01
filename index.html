@@ -1,29 +1,6 @@
 ---
 layout: default
 ---
-<script>
-    function sendMail() {
-        //alert("no email sending..this is a demo site");
-        retun true;
-        /*
-        $.ajax('https://api.mailgun.net/v3/sandboxc390aca07b594c48a282348d48e1042e.mailgun.org/messages',
-        {
-            type:"POST",
-            username: 'api',
-            password: 'key-8f7d72da06e3d3ac656128e4998529c3',
-            data:{
-                "html": "<h1>TITLE-HERE</h1>",
-                "subject": "Hey you, awesome",
-                "from": "User<contact@shegiye.com>",
-                "to": "<antenehgeb@gmail.com>"
-            },
-            success:function(a,b,c){
-                console.log( 'mail sent: ', b );
-            }.bind(this),
-            error:function( xhr, status, errText ){console.log( 'mail sent failed: ', xhr.responseText );}
-        })*/
-}
-</script>
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -56,9 +33,13 @@ layout: default
         <div class="inner split">
             <div>
                 <section>
-                    <h2>Hey there, my name is Mesfin Adugna (Ethiographics photography)</h2>
+                    <h2>Get in touch</h2>
+                    <ul class="icons">
+                        <li icon fa-tel>USA +1 408-489-0851</li>
+                        <li icon fa-tel>Ethiopia +251-933-93-19-82</li>
+                        <li icon fa-email><a mailto="mesfin@ethiographics.com">mesfin@ethiographics.com</a></li>
+                    </ul>
                     <p>{{ site.bio }}</p>
-                    <p>{{ site.publicise }}</p>
                 </section>
                 <section>
                     <h2>Follow me on ...</h2>
@@ -90,6 +71,8 @@ layout: default
             </div>
             <div>
                 <section>
+                    <p>{{ site.publicise }}</p>
+                    <!--
                     <h2>Get in touch</h2>
                     <form method="post" onsubmit="sendMail();" >
                         <div class="field half first">
@@ -106,6 +89,7 @@ layout: default
                             <li><input type="reset" value="Reset"/></li>
                         </ul>
                     </form>
+                    -->
                 </section>
             </div>
         </div>
